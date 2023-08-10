@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+:root{
+  font-size:62.5%;
+  --nav-bg:#fff;
+  --nav-text:rgba(128, 128, 128, 1);
+  --text-light:rgb(234, 213, 117);
+  --bg-color:rgba(255, 255, 255, 0.774);
+  --h1-font: 'Open Sans', arial, sans-serif;  ;
+}
+body{
+  font:1.6rem 'Montserrat';
+  background-color:grey;
+  color:black;
+  /* overflow-x: hidden; */
+}
+
+li a{
+  cursor:pointer;
+  text-decoration:none;
+  list-style:none;
+}
+h1{
+  font:9.5rem var(--h1-font);
+  /* line-height:90px; */
+}
+
+h2{
+  color: rgb(51, 43, 43);
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* ------------------------------------------------------------------------------------- */
+.nav-bar{
+  position:fixed;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  height:60px;
+  padding:5px 25px;
+  background-color:white;
+  z-index:2;
+}
+.nav-lists li{
+  display:inline-block;
+  margin-right:17px;
+  height:100%;
+  position: relative;
+}
+.nav-lists li a{
+  height:100%;
+  text-transform:capitalize;
+  color:var(--nav-text);
+}
+
+.nav-lists li a:hover::after,
+.nav-lists li a:hover{
+  color:rgba(32, 32, 33, 0.45);
+  width: 100%;
+  left: 0;
+}
+.nav-lists li a::after{
+  content: " ";
+  position:absolute ;
+  width: 0;
+  height: 3px;
+  top: 100%;
+  left:50%;
+  background-color: grey;
+  transition: width .6s ease-in-out, left .6s ease-in-out;
+}
+
+.main-container{
+  position:relative;
+  padding:2px 20px;
+  margin-top:60px;
+  color:black;
+  width:100%;
+  height:calc(100vh - 60px);
+  /* rl(image/myimage.png) no-repeat 50% 72% / 92vh, */
+  background:  url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='144em' height='59em' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 0.774)'%3e%3c/rect%3e%3cpath d='M 0%2c133 C 57.6%2c161 172.8%2c298.6 288%2c273 C 403.2%2c247.4 460.8%2c24.6 576%2c5 C 691.2%2c-14.6 748.8%2c153.2 864%2c175 C 979.2%2c196.8 1036.8%2c120.6 1152%2c114 C 1267.2%2c107.4 1382.4%2c136.4 1440%2c142L1440 560L0 560z' fill='rgba(214%2c 212%2c 214%2c 0.774)'%3e%3c/path%3e%3cpath d='M 0%2c439 C 96%2c421 288%2c347.2 480%2c349 C 672%2c350.8 768%2c461.2 960%2c448 C 1152%2c434.8 1344%2c316 1440%2c283L1440 560L0 560z' fill='rgba(128%2c 128%2c 128%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e") ;
+  z-index:-1;
+}
+.landing__img{
+  position: absolute;
+  right:40%;
+  left:35%;
+  top:0%;
+  z-index:2;
+}
+.intro-text{
+  font-size:1.8rem;
+  position:absolute;
+  top:14vh;
+  left:8vw;
+}
+.intro__h1{
+  border: 1px solid red;
+  width: 90vw;
+  align-items: center;
+
+}
+.social-links li{
+  display:inline-block;
+  margin-top:25px;
+  margin-right:15px;
+  position:relative;
+  left:150px;
+  
+}
+.social-ls i:hover{
+  color:black;
+  cursor: pointer;
+}
+.intro-q p{
+  position:absolute;
+  font-size:2.1rem;
+  top:35vh;
+  left:62vw;
+  color:rgba(0, 0, 0, 0.801);
+  padding:20px;
+}
+.intro-q2 p{
+  position:absolute;
+  font-size:2.1rem;
+  top:52vh;
+  left:65vw;
+  color:rgba(0, 0, 0, 0.801);;
+  padding:20px;
+}
+.intro-q p::before,
+.intro-q2 p::before
+{
+  content:open-quote;
+  margin-right:5px;
+}
+.intro-q p::after,
+.intro-q2 p::after{
+   content:close-quote;
+  margin-left:5px;
+  
+}
+/* ---------------------------------- About Section ----------------------------------------------- */
+.about__section{
+  width:100%;
+  background-color:rgb(211, 211, 211);
+  padding-bottom: 2rem;
+}
+.about__section--content{
+  flex:1 1 52%;
+}
+.about__section--container{
+
+  flex:1 1 43%;
+  max-width: 43%;
+
+}
+
+/* ------------------------------ skill section -------------------------------------------- */
+.skill__section--box{
+  width: 20em;
+  height:20em;
+  border-radius: 20%;
+
+}
+#b{
+  height:500px;
+ background-color:rgba(255, 255, 255, 0.774);
+}
