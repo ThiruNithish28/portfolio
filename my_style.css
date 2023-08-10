@@ -1,0 +1,96 @@
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    padding:1.2rem 1.5rem;
+}
+.d-flex{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.d-flex-col{
+    display:flex;
+    flex-direction: column;
+    align-items:space-between;
+}
+.m-right{
+    margin-right:1.3em;
+}
+.g-1e{
+    gap:1.6em;
+}
+.g-2e{
+    gap:2.8em;
+}
+
+.btn{
+    cursor: pointer;
+    font-size:1.9rem;
+    padding: .8em 1.5em;
+    border-radius: 1.1rem;
+    text-transform: capitalize;
+}
+.btn-blur{
+    position: relative;
+    isolation: isolate;
+}
+.btn-blur:after,
+.btn-blur:before{
+    content: "";
+    position: absolute;
+    inset:0;
+    z-index: -1;
+    transition :filter .4s, background-color .6s;
+}
+.btn-blur:hover::before{
+    filter: blur(.8em);
+    background-color: var(--secondary-color);
+}
+.btn-blur:hover::after{
+    filter: blur(.5em);
+    background-color: var(--secondary-color);
+}
+
+/* ------------------person pop oout effect ------------------------------------------ */
+
+.popout__effect{
+    position: relative;
+    max-width: 57%;
+    padding: 0;
+    margin: auto;
+}
+.popout__effect--container{
+    display: grid;
+    align-items: end;
+    aspect-ratio: 1/1.2;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.popout__circle{
+    display: block;
+    position: absolute;
+    inset: auto 0 0;
+    margin-inline:auto ;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.popout__person{
+    position: relative;
+    left:1.1rem;
+    max-width: 100%;
+    z-index: 1;
+    transform: scale(1.67);
+    transition: transform .8s ease;
+}
+.popout__effect--container:hover{
+    transform: scale(1.1);
+}
+.popout__effect--container:hover .popout__person{
+    transform: translateY(-2.4em)
+    scale(1.5);
+}
