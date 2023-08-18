@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+ 
 *{
   margin:0px;
   padding:0px;
@@ -7,11 +7,12 @@
 }
 :root{
   font-size:62.5%;
+  --hover-color:rgb(226, 179, 179);
   --nav-bg:#fff;
   --nav-text:rgba(128, 128, 128, 1);
   --text-light:rgb(234, 213, 117);
   --bg-color:rgba(255, 255, 255, 0.774);
-  --h1-font: 'Open Sans', arial, sans-serif;  ;
+  --h1-font:'Advent Pro', sans-serif;
 }
 body{
   font:1.6rem 'Montserrat';
@@ -26,14 +27,26 @@ li a{
   list-style:none;
 }
 h1{
-  font:9.5rem var(--h1-font);
-  /* line-height:90px; */
+  font:10rem var(--h1-font);
+  font-weight: 900;
 }
 
 h2{
   color: rgb(51, 43, 43);
   margin-bottom: 20px;
   text-align: center;
+  text-transform: capitalize;
+}
+h3{
+  color:rgb(34, 34, 34);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+h4{
+  font-size: 1.8rem;
+  color:var(--hover-color);
+  margin-bottom: 1rem;
   text-transform: capitalize;
 }
 
@@ -63,8 +76,10 @@ h2{
 }
 
 .nav-lists li a:hover::after,
-.nav-lists li a:hover{
-  color:rgba(32, 32, 33, 0.45);
+.nav-lists li a:hover
+{
+  /* color:rgba(32, 32, 33, 0.45); */
+  color: var(--hover-color);
   width: 100%;
   left: 0;
 }
@@ -75,7 +90,7 @@ h2{
   height: 3px;
   top: 100%;
   left:50%;
-  background-color: grey;
+  background-color: var(--hover-color);
   transition: width .6s ease-in-out, left .6s ease-in-out;
 }
 
@@ -86,25 +101,37 @@ h2{
   color:black;
   width:100%;
   height:calc(100vh - 60px);
-  /* rl(image/myimage.png) no-repeat 50% 72% / 92vh, */
-  background:  url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='144em' height='59em' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 0.774)'%3e%3c/rect%3e%3cpath d='M 0%2c133 C 57.6%2c161 172.8%2c298.6 288%2c273 C 403.2%2c247.4 460.8%2c24.6 576%2c5 C 691.2%2c-14.6 748.8%2c153.2 864%2c175 C 979.2%2c196.8 1036.8%2c120.6 1152%2c114 C 1267.2%2c107.4 1382.4%2c136.4 1440%2c142L1440 560L0 560z' fill='rgba(214%2c 212%2c 214%2c 0.774)'%3e%3c/path%3e%3cpath d='M 0%2c439 C 96%2c421 288%2c347.2 480%2c349 C 672%2c350.8 768%2c461.2 960%2c448 C 1152%2c434.8 1344%2c316 1440%2c283L1440 560L0 560z' fill='rgba(128%2c 128%2c 128%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e") ;
-  z-index:-1;
+  background-color: rgba(255, 255, 255, 0.897);
+  /* background:  url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='144em' height='59em' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 0.774)'%3e%3c/rect%3e%3cpath d='M 0%2c133 C 57.6%2c161 172.8%2c298.6 288%2c273 C 403.2%2c247.4 460.8%2c24.6 576%2c5 C 691.2%2c-14.6 748.8%2c153.2 864%2c175 C 979.2%2c196.8 1036.8%2c120.6 1152%2c114 C 1267.2%2c107.4 1382.4%2c136.4 1440%2c142L1440 560L0 560z' fill='rgba(214%2c 212%2c 214%2c 0.774)'%3e%3c/path%3e%3cpath d='M 0%2c439 C 96%2c421 288%2c347.2 480%2c349 C 672%2c350.8 768%2c461.2 960%2c448 C 1152%2c434.8 1344%2c316 1440%2c283L1440 560L0 560z' fill='rgba(128%2c 128%2c 128%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e") ; */
 }
+.sub__container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height:calc(100vh - 130px);
+  justify-content: space-around;
+  align-items: center;
+}
+
 .landing__img{
   position: absolute;
-  right:40%;
-  left:35%;
-  top:0%;
+  right:35% ;
+  bottom: 0;
   z-index:2;
 }
+.landing__img img{
+  width: 400px;
+}
+
 .intro-text{
+  
   font-size:1.8rem;
-  position:absolute;
-  top:14vh;
-  left:8vw;
+  /* position:absolute;
+  bottom:35vh;
+  left:6vw; */
 }
 .intro__h1{
-  border: 1px solid red;
+ 
   width: 90vw;
   align-items: center;
 
@@ -117,19 +144,13 @@ h2{
   left:150px;
   
 }
-.social-ls i:hover{
+
+.social-ls:hover a{
   color:black;
   cursor: pointer;
 }
+
 .intro-q p{
-  position:absolute;
-  font-size:2.1rem;
-  top:35vh;
-  left:62vw;
-  color:rgba(0, 0, 0, 0.801);
-  padding:20px;
-}
-.intro-q2 p{
   position:absolute;
   font-size:2.1rem;
   top:52vh;
@@ -137,23 +158,65 @@ h2{
   color:rgba(0, 0, 0, 0.801);;
   padding:20px;
 }
-.intro-q p::before,
-.intro-q2 p::before
+.intro-q p::before
 {
   content:open-quote;
   margin-right:5px;
+  color: black;
 }
-.intro-q p::after,
-.intro-q2 p::after{
-   content:close-quote;
+.intro-q p::after{
+  content:close-quote;
   margin-left:5px;
+  color: black;
   
 }
+.call_2_action{
+  display: flex;
+  z-index:2;
+}
+
+.landing__call2action,
+.landing__call2action--black{
+  font-size: 1.5rem;
+  padding-top:.4em;
+  padding-bottom: .4em;
+  border-radius: 5px;
+  color: black;
+  background-color: transparent;
+  border: 2px solid rgb(0, 0, 0);
+  transition: background-color .6s ease-in, padding .7s ease-in;
+}
+
+.landing__call2action--black{
+  border: 2px solid white;
+  box-shadow:inset 300px 0 0 black;
+  color:white;
+  
+}
+.landing__call2action:hover,
+.landing__call2action--black:hover{
+  color: white;
+  border: black;
+  background-color: black;
+  padding:.4em 2em ;
+}
+
+
+
+.call_2_action .btn-blur:hover::before,
+.call_2_action .btn-blur:hover::after{
+  background-color: black;
+}
+
 /* ---------------------------------- About Section ----------------------------------------------- */
 .about__section{
+  margin-top: 60px;
   width:100%;
-  background-color:rgb(211, 211, 211);
+  background-color:rgb(255, 255, 255);
   padding-bottom: 2rem;
+}
+.about__section--social-links{
+ padding : 0px 5vw;
 }
 .about__section--content{
   flex:1 1 52%;
@@ -164,15 +227,54 @@ h2{
   max-width: 43%;
 
 }
-
-/* ------------------------------ skill section -------------------------------------------- */
-.skill__section--box{
-  width: 20em;
-  height:20em;
-  border-radius: 20%;
-
+.about__section--skill{
+  margin-top: 2em;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 14px;
+  padding: 2rem;
 }
-#b{
-  height:500px;
- background-color:rgba(255, 255, 255, 0.774);
+.about__section--skill:hover{
+box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.about__section--contact{
+  background: linear-gradient(45deg , rgba(2, 2, 2, 0.8),rgba(50, 50, 50, 0.431)),url(image/contact_background.png);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 15rem 25rem;
+}
+.about__section--contact h2{
+  color:rgb(226, 179, 179);
+}
+.about__section--contact--call2action{
+  margin-top: 4rem;
+  justify-content: center;
+}
+.about__section--contact--call2action button{
+  border: 1px solid  white;
+  background:transparent;
+}
+.about__section--contact--call2action button a{
+  color:white;
+}
+/* --------------------------------footer------------------------------------------------------ */
+.footer{
+  display: grid;
+  color: white;
+  background-color: black;
+}
+.footer__list li{
+margin-top: .4rem;
+}
+.footer__list li a{
+  text-transform: capitalize;
+  color: white;
+  }
+/* ------------------------------ skill section -------------------------------------------- */
+
+@media (max-width: 1024px){
+  .landing__img{
+    right:32%;
+  }
 }

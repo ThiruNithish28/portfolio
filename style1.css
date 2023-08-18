@@ -1,0 +1,43 @@
+.container {
+    /* Existing styles */
+  }
+  
+  .popout__effect {
+    /* Existing styles */
+    flex: 0 0 50%; /* Remove this line */
+    width: 100%; /* Add this line */
+  }
+  
+  .about__section {
+    /* Existing styles */
+    display: flex; /* Add this line */
+    justify-content: space-between; /* Add this line */
+  }
+  
+  .about__section--content {
+    /* Existing styles */
+    flex: 0 0 40%;
+    max-width: 40%; /* Add this line */
+    box-sizing: border-box; /* Add this line */
+  }
+  
+  .popout__effect--container {
+    /* Existing styles */
+    max-width: 60%; /* Reduce this value to leave space for the content */
+  }
+  
+  .popout__person {
+    /* Existing styles */
+    transform: scale(1.2); /* Adjust this value as needed */
+  }
+  
+  .popout__effect--container:hover {
+    /* Existing styles */
+    transform: scale(1.05); /* Adjust this value as needed */
+  }
+  
+  .popout__effect--container:hover .popout__person {
+    /* Existing styles */
+    transform: translateY(-0.4em) scale(1.3); /* Adjust this value as needed */
+  }
+  
