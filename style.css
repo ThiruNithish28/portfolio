@@ -12,7 +12,9 @@
   --nav-text:rgba(128, 128, 128, 1);
   --text-light:rgb(234, 213, 117);
   --bg-color:rgba(255, 255, 255, 0.774);
+
   --h1-font:'Advent Pro', sans-serif;
+
 }
 body{
   font:1.6rem 'Montserrat';
