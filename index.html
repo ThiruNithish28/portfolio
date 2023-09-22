@@ -7,8 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href="style.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
   <link href="my_style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 
 </head>
 
@@ -20,7 +24,7 @@
       <div class="nav-menu">
         <ul class="nav-lists">
           <li><a href="#landing">home</a></li>
-          <li><a href="#a">about</a></li>
+          <li><a href="about.html">about</a></li>
           <li><a href="#b">contact </a></li>
           <li><a href="#c">certificate</a></li>
         </ul>
@@ -28,67 +32,36 @@
     </nav>
   </header>
 
-  <main class="main-container" id="landing">
+  <main class="main-container  " id="landing">
 
-    <div class="intro-text">
-      
-      <div class="intro__h1 d-flex-col">
-        <p>my name is <b>THIRUMAVALAVAN P</b></p>
-        <h1>Aspiring Web </h1>
-        <h1>& App developer</h1>
+    <div class=" sub__container ">
+      <div >
+        <img src="image/myimage.png" alt="hi" class="landing__img">
+      </div>
+      <div class="intro-text">
+        <div class="intro__h1 d-flex-col">
+          <p>my name is <b>THIRUMAVALAVAN P</b></p>
+          <h1>Aspiring Web </h1>
+          <h1>& App developer</h1>
+        </div>
+
       </div>
       <ul class="social-links">
         <li><a href="#" class="social-ls"><i class='bx bxl-instagram ' style='color:grey'></i></a></li>
-        <li><a href="#" class="social-ls"><i class='bx bxl-twitter ' style='color:grey'></i></a></li>
+        <li><a href="#" class="social-ls"><i class='bx bxl-twitter ' ^ style='color:grey'></i></a></li>
         <li><a href="#" class="social-ls"><i class='bx bxl-linkedin-square ' style='color:grey'></i></a></li>
         <li><a href="#" class="social-ls"><i class='bx bxl-github ' style='color:grey'></i></a></li>
       </ul>
-    </div>
-    <img src="image/myimage.png" alt="" class="landing__img">
-    <!-- <div class="intro-q">
-      <p>Develop a passion for learning. <br>If you do, you will never cease to grow</p>
-    </div> -->
-    <div class="intro-q2">
-      <p>Develop a passion for learning. <br>If you do, you will never cease to grow</p>
+      <div class="intro-q">
+        <p>Develop a passion for learning. <br>If you do, you will never cease to grow</p>
+      </div>
+      <div class="call_2_action  g-2e">
+        <a class="btn btn-blur landing__call2action--black" href="">Get in Touch</a>
+        <a class="btn btn-blur  landing__call2action" href="">Explore My Work</a>
+      </div>
+      
     </div>
   </main>
-  <section class=" about__section " id="a">
-    <div class="container d-flex g-2e ">
-      <div class="about__section--container">
-        <div class="popout__effect">
-          <div class="popout__effect--container">
-            <img src="image/baground_4r_cricle.jpg" alt="" class="popout__circle">
-            <img src="image/myimage1.png" alt="" class="popout__person">
-          </div>
-        </div>
-      </div>
-      <div class="about__section--content">
-        <h2>about</h2>
-        <div>
-          <p> Hey hi ! "I am an ambitious B.Tech student majoring in Computer Science and Business Systems with a keen
-            interest in web and Android development. Possessing strong problem-solving skills, I aspire to excel as a
-            proficient web and Android developer. My dedication and sense of responsibility drive me to approach
-            challenges with diligence and determination.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class=" skill_section " id="b">
-    <div class="container ">
-      <h2>skills</h2>
-      <div class="skill-content d-flex">
-        <div class="skill__section--box">
-          <h2>web devlopment</h2>
-        </div>
-        <div class="skill__section--box">
-          <h2>problem solving</h2>
-        </div>
-      </div>
-    </div>
-
-  </section>
-  <sectionn class="three" id="c"></sectionn>
-
 </body>
 
 </html>
