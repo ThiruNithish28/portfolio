@@ -459,6 +459,9 @@ place-items: center;
     border-bottom:1px solid var(--secondary-color);
     
   }
+  .nav-lists ul li a:hover::after{
+    display: none;
+  }
   .nav-lists-links{
    position: relative;
     display: block;
