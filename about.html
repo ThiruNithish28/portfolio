@@ -7,33 +7,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
- 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
   <link href="my_style.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
   <header>
     <nav class="nav-bar">
       <div class="nav-logo">
+        <img src="./image/logo.png" alt="THIRU">
       </div>
-      <div class="nav-menu">
-        <ul class="nav-lists">
-          <li><a href="index.html">home</a></li>
-          <li><a href="about.html">about</a></li>
-          <!-- <li><a href="#c"></a></li> -->
-          <li><a href="contact.html">contact </a></li>
+
+      <button aria-controls="nav-lists" aria-expanded="false" class="menu-toggle"></button>
+
+      <div id="nav-lists" class="nav-lists" data-visible="false">
+        <ul>
+          <li><a href="index.html" class="nav-lists-links">home<span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" viewBox="0 0 24 24" style="fill: #bb86fc;">
+                  <path
+                    d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15v-4H7v-2h5V7l5 5-5 5z">
+                  </path>
+                </svg></span></li>
+          <li><a href="about.html" class="nav-lists-links">about <span><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" style="fill: #bb86fc;">
+                  <path
+                    d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15v-4H7v-2h5V7l5 5-5 5z">
+                  </path>
+                </svg></span></a></li>
+          <li><a href="mailto:thirunithish07@gmail.com" class="nav-lists-links">contact <span><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" style="fill: #bb86fc;">
+                  <path
+                    d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15v-4H7v-2h5V7l5 5-5 5z">
+                  </path>
+                </svg></span></a></li>
+          <li><a href="files/Update resume.pdf" target="_blank" class="nav-lists-links">resume <span><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #bb86fc;">
+                  <path
+                    d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15v-4H7v-2h5V7l5 5-5 5z">
+                  </path>
+                </svg></span></a></li>
+                <li><a href="project.html" class="nav-lists-links">Protfolio<span><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #bb86fc;">
+                  <path
+                    d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15v-4H7v-2h5V7l5 5-5 5z">
+                  </path>
+                </svg></span></a></li>
         </ul>
+        <div class="mobile-hanbuger-extrat-content">
+          <div>
+            <p>thirunithish07@gmail.com</p>
+          <h3>7094335638</h3>
+          </div>
+
+          <div class="mobile-hanbuger-social-links">
+            <ol class="social-links d-flex g-1e">
+              <li><a href="https://www.instagram.com/mr_thiru__49/"target="_blank"  class="social-ls "><i class='bx bxl-instagram bx-fade-up-hover '
+                    style='color:grey'></i></a>
+              </li>
+              <li><a href="#" class="social-ls "><i class='bx bxl-twitter bx-fade-up-hover ' style='color:grey'></i></a>
+              </li>
+              <li><a href="https://www.linkedin.com/in/thirumavalavan-p-196872248/" target="_blank"   class="social-ls"><i class='bx bxl-linkedin-square bx-fade-up-hover'
+                    style='color:grey'></i></a></li>
+              <li><a href="https://github.com/ThiruNithish28" target="_blank"  class="social-ls"><i class='bx bxl-github bx-fade-up-hover ' style='color:grey'></i></a>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
+
     </nav>
   </header>
-<section class=" about__section " id="a">
-    <div class="container d-flex g-2e ">
-      <div class="about__section--container">
+  <section class=" about__section " >
+    <p>LET'S GET TO KNOW EACH OTHER &#9996;</p>
+    <h1>About</h1>
+    <div class="about__section--topContainer container d-flex-col g-2e ">
+      <div class="about__section--container ">
         <div class="popout__effect">
           <div class="popout__effect--container">
             <img src="image/baground_4r_cricle.jpg" alt="" class="popout__circle">
@@ -42,72 +99,145 @@
         </div>
       </div>
       <div class="about__section--content">
-        <h2>about</h2>
+
         <div>
           <p> Hey hi ! "I am an ambitious B.Tech student majoring in Computer Science and Business Systems with a keen
-            interest in web and Android development. Possessing strong problem-solving skills, I aspire to excel as a
+            interest in web and Android development. <br><br>Possessing strong problem-solving skills, I aspire to excel
+            as a
             proficient web and Android developer. My dedication and sense of responsibility drive me to approach
             challenges with diligence and determination.</p>
-           <p style="margin-top: .5rem;"><a href="files/Update resume.pdf" target="_blank" >resume</a></p> 
+          <p style="margin-top: .5rem;"><a href="files/Update resume.pdf" target="_blank">resume</a></p>
+          <br>
+          <p>I also like sharing content related to the stuff that I have learned over the years in Web Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin where I post useful content related to Web Development and Programming</p>
         </div>
         <div class="about__section--social-links ">
+          <p>Support my work Lets Follow me on </p>
           <ul class="social-links">
-            <li><a href="#" class="social-ls"><i class='bx bxl-instagram ' style='color:grey'></i></a></li>
-            <li><a href="#" class="social-ls"><i class='bx bxl-twitter ' style='color:grey'></i></a></li>
-            <li><a href="#" class="social-ls"><i class='bx bxl-linkedin-square ' style='color:grey'></i></a></li>
-            <li><a href="#" class="social-ls"><i class='bx bxl-github ' style='color:grey'></i></a></li>
+            <li><a href="https://www.instagram.com/mr_thiru__49/" target="_blank"  class="social-ls "><i class='bx bxl-instagram bx-fade-up-hover ' style='color:grey'></i></a>
+            </li>
+            <li><a href="#" class="social-ls "><i class='bx bxl-twitter bx-fade-up-hover ' style='color:grey'></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/thirumavalavan-p-196872248/" target="_blank" class="social-ls"><i class='bx bxl-linkedin-square bx-fade-up-hover'
+                  style='color:grey'></i></a></li>
+            <li><a href="https://github.com/ThiruNithish28" target="_blank"  class="social-ls"><i class='bx bxl-github bx-fade-up-hover ' style='color:grey'></i></a>
+            </li>
           </ul>
         </div>
       </div>
-     
+
     </div>
     <div class="container">
       <h2>what can i do for you </h2>
-      <div class="d-flex g-2e">
-      <div class="about__section--skill">
-        <h3>bulid a responive website </h3>
-        <p>Trust my skills i will develope amazing ,best, high-performing and quickly delivered website by satifies your expection and needs </p>
-      </div>
-      <div class="about__section--skill">
-        <h3>bulid a amazing app </h3>
-        <p>Trust my skills i will develope amazing ,modern, high-performing and quickly delivered application by satifies your expection and needs </p>
-      </div>
+
+      <div class="d-flex g-1e aboutSec__skillContainer ">
+        <div class="about__section--skill">
+          <video id="darkModeVideo" autoplay="autoplay" muted="muted" loop="loop" playsinline="">
+            <source src="./image/web-developer.mp4" type="video/mp4">
+          </video>
+          <h3>bulid a responive website </h3>
+          <p>Trust my skills i will develope amazing ,best, high-performing and quickly delivered website by satifies
+            your expection and needs </p>
+        </div>
+        <div class="about__section--skill">
+          <video src="./image/app-development.mp4" autoplay="autoplay" muted="muted" loop="loop" playsinline=""
+            type="video/mp4"></video>
+          <h3>bulid a amazing app </h3>
+
+          <p>Trust my skills i will develope amazing ,modern, high-performing and quickly delivered application by
+            satifies your expection and needs </p>
+        </div>
+        <div class="about__section--skill">
+          <video id="darkModeVideo" autoplay="autoplay" muted="muted" loop="loop" playsinline="">
+            <source src="./image/web-developer.mp4" type="video/mp4">
+          </video>
+          <h3>maintenance and support </h3>
+          <p>Ensure your website stays up-to-date and glitch-free with our comprehensive maintenance and support
+            services. We provide timely updates, regular backups, and troubleshooting to keep your site running
+            smoothly.</p>
+        </div>
       </div>
     </div>
+    </div>
   </section>
+
   <section class="about__section--contact">
     <div class="container d-flex-col ">
       <h2>Let's Collaborate and Innovate</h2>
-    <p>Let's connect and create something exceptional together. You can contact me via email or connect on social media – I can't wait to hear your ideas!</p>
-    <div class="about__section--contact--call2action d-flex g-2e">
-      <button class="btn btn-blur "><a href="contact.html" >contact me</a></button>
-      <button class="btn btn-blur "><a href="work.html">see my project</a></button>
-    </div>
+      <p>Let's connect and create something exceptional together. You can contact me via email or connect on social
+        media – I can't wait to hear your ideas!</p>
+      <div class="about__section--contact--call2action d-flex g-2e">
+        <button class="btn btn-blur  " id="open-contactForm"><a href="mailto: thirunithish07@gmail.com ">contact me</a></button>
+        <button class="btn btn-blur "><a href="project.html">see my project</a></button>
+      </div>
     </div>
   </section>
-<footer class="footer">
-  <div class="footer__items ">
-    <ul class="footer__list d-flex-col ">
-      <h4>links</h4>
-      <li><a href="index.html">home</a></li>
-      <li><a href="about.html">about</a></li>
-      <li><a href="#c">resume</a></li>
-      <li><a href="contact.html">contact </a></li>
-    </ul>
-  </div>
-  <div class="footer__social--links">
-    <h4>follow me</h4>
-    <p>let us be social</p>
-    <ul class="social-links">
-      <li><a href="#" class="social-ls"><i class='bx bxl-instagram ' style='color:grey'></i></a></li>
-      <li><a href="#" class="social-ls"><i class='bx bxl-twitter ' style='color:grey'></i></a></li>
-      <li><a href="#" class="social-ls"><i class='bx bxl-linkedin-square ' style='color:grey'></i></a></li>
-      <li><a href="#" class="social-ls"><i class='bx bxl-github ' style='color:grey'></i></a></li>
-    </ul>
-    <p>connect with me on social media platform to stay update on my latest project ,news ,insights</p>
-  </div>
-</footer>
-</body>
-</html>
+ 
+  <section class="container my_skills--container">
+    <h2>SKILLS</h2>
+    <div class="my_skills d-grid">
+      <div class="d-flex-col">
+        <img src="./image/c.webp" alt="c language">
+      <h3>C Programming</h3>
+      </div>
+      <div class="d-flex-col">
+        <img src="./image/java.webp" alt="java language">
+      <h3>Java Programming</h3>
+      </div>
+      <div class="d-flex-col">
+        <img src="./image/py.webp" alt="python">
+      <h3>Python Programming</h3>
+      </div>
+      <div class="d-flex-col">
+        <img src="./image/html.webp" alt="html">
+      <h3>HTML 5</h3>
+      </div>
+      <div class="d-flex-col">
+        <img src="./image/css.webp" alt="css">
+      <h3>Css 3</h3>
+      </div>
+      <div class="d-flex-col">
+        <img src="./image/js.webp" alt="java script">
+      <h3>Java Script</h3>
+      </div>
+    </div>
+  </section>
+  
+ 
+  <footer class="footer d-grid">
+    <div class="intro-footer">
+      <h4>THIRU P</h4>
+      <p>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</p>
+    </div>
+   
+    <div class="footer__items ">
+      <ul class="footer__list d-flex-col ">
+        <h4>links</h4>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="./files/final resume.pdf">resume</a></li>
+        <li><a href="contact.html">contact </a></li>
+        <li><a href="project.html">Protfolio</a></li>
+      </ul>
+    </div>
 
-<!-- text-stroke: -->
+    <div class="footer__social--links">
+      <h4>follow me</h4>
+      <p>let us be social</p>
+      <ul class="social-links ">
+        <li><a href="https://www.instagram.com/mr_thiru__49/" target="_blank" class="social-ls "><i class='bx bxl-instagram bx-fade-up-hover ' style='color:white'></i></a>
+        </li>
+        <li><a href="#" class="social-ls "><i class='bx bxl-twitter bx-fade-up-hover ' style='color:white'></i></a></li>
+        <li><a href="https://www.linkedin.com/in/thirumavalavan-p-196872248/" target="_blank" class="social-ls"><i class='bx bxl-linkedin-square bx-fade-up-hover' style='color:white'></i></a>
+        </li>
+        <li><a href="https://github.com/ThiruNithish28" target="_blank" class="social-ls"><i class='bx bxl-github bx-fade-up-hover ' style='color:white'></i></a></li>
+      </ul>
+      <p>connect with me on social media platform to stay update on my latest project ,news ,insights</p>
+    </div>
+
+    <!-- <a href="https://storyset.com/web">Web illustrations by Storyset</a> -->
+
+  </footer>
+  <script src="./js/about.js"></script>
+</body>
+
+</html>

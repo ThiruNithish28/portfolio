@@ -12,10 +12,14 @@ a{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    
 }
 .d-flex-col{
     display:flex;
     flex-direction: column;
+}
+.d-grid{
+    display: grid;
 }
 .m-right{
     margin-right:1.3em;
@@ -51,11 +55,11 @@ a{
 }
 .btn-blur:hover::before{
     filter: blur(.8em);
-    background-color: rgb(226, 179, 179);
+    background-color: #6200EE;
 }
 .btn-blur:hover::after{
     filter: blur(.5em);
-    background-color: rgb(226, 179, 179);
+    background-color: #6200EE;
 }
 
 
@@ -65,22 +69,22 @@ a{
 .fill-right,
 .fill-top,
 .fill-bottom{
-   box-shadow:inset 0 0 0 white;
-  transition: box-shadow .6s ease-in, color .7s ease-in-out;
+   box-shadow:inset 0 0 0 #6200EE;
+  transition:color .7s ease-in-out,box-shadow .6s ease-in;
 }
 .fill-left:hover{
   border:0px;
-  box-shadow:inset 200px 0 0 white;
+  box-shadow:inset 200px 0 0 #6200EE;
   color:white;
 }
 .fill-right:hover{
   border:0px;
-  box-shadow:inset -200px 0 0 white;
+  box-shadow:inset -200px 0 0 #6200EE;
   color:black;
 }
 .fill-top:hover{
   border:0px;
-  box-shadow:inset 0 200px 0 white;
+  box-shadow:inset 0 200px 0 #6200EE;
   color:black;
 }
 .fill-bottom:hover{
@@ -93,7 +97,8 @@ a{
 
 .popout__effect{
     position: relative;
-    max-width: 57%;
+    max-width: 89%;
+    min-width:57%;
     padding: 0;
     margin: auto;
 }
@@ -114,7 +119,6 @@ a{
     max-width: 100%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    border: 3px solid white;
 }
 .popout__person{
     position: relative;
@@ -133,3 +137,17 @@ a{
 }
 
 /* ------ */
+@media only screen and (max-width: 481px){
+    body{
+        text-align: center;
+    }
+    .d-flex{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .btn{
+        width:100%;
+        padding: .6em 1em;
+    }
+
+}
