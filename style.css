@@ -154,7 +154,6 @@ a > span{
 }
 
 .landing__img {
-border: 1px solid red;
   position: absolute;
   top: 10px;
   inset: 0;
@@ -500,7 +499,7 @@ place-items: center;
   }
 
   .landing__img img {
-    width: 320px;
+    width: 420px;
   }
 
   .landingpage__links {
