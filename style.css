@@ -486,7 +486,7 @@ place-items: center;
   .mobile-hanbuger-extrat-content
 {
   display: block;
- 
+  margin-bottom: 60px;
 }
 
   .sub__container {
