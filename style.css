@@ -277,9 +277,8 @@ a > span{
 }
 
 .about__section--container {
-  height: 50vh;
   max-width: 70%;
-  padding-bottom: 38rem;
+  margin-bottom:4rem;
 }
 
 .about__section--topContainer {
