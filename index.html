@@ -9,6 +9,8 @@
   <link rel="icon" href="./image/logo.png" type="image/icon type">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+  <!-- link for aos libary -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
@@ -92,9 +94,19 @@
       </div>
       <div class="intro-text">
         <div class="intro__h1 d-flex-col">
-          <p>my name is <b>THIRUMAVALAVAN P</b> &#128075;</p>
-          <h1 class="IstTitle">Aspiring Web </h1>
-          <h1 class="IIndTitle">& App developer</h1>
+          <p
+          data-aos="fade-down"
+          data-aos-duration="1500"
+          data-aos-delay="200">my name is <b>THIRUMAVALAVAN P</b> &#128075;</p>
+          <h1 
+          class="IstTitle"
+          data-aos="fade-left"
+          data-aos-duration="1000">Aspiring Web </h1>
+          <h1 
+          class="IIndTitle"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-delay="300">& App developer</h1>
         </div>
 
       </div>
@@ -111,7 +123,11 @@
         </ul>
       </div>
 
-      <div class="intro-q">
+      <div 
+      class="intro-q"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-delay="360">
         <p>Develop a passion for learning. <br>If you do, you will never cease to grow</p>
       </div>
       <div class="call_2_action  ">
@@ -122,6 +138,13 @@
     </div>
   </main>
   <script src="./js/index.js"></script>
+
+  <!-- aos script link  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9HFYRN6W9"></script>
 <script>

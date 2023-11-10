@@ -28,7 +28,7 @@ body {
   font: 1.6rem 'Montserrat';
   background-color: var(--bg-color);
   color: black;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 li a {
@@ -360,7 +360,7 @@ place-items: center;
 .project-works{
   padding: 5px;
   grid-template-columns: repeat(2,1fr);
-  column-gap: 2em;
+  gap: 2em;
 }
 .project-works div{
 
