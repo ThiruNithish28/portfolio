@@ -12,7 +12,7 @@
   font-size: 62.5%;
 
   --hover-color: #6200EE;
-  --nav-bg: #fff;
+  --nav-bg:rgba(255,255,255,0.3);
   --nav-text: rgba(128, 128, 128, 1);
   --text-light: rgb(234, 213, 117);
   --bg-color: rgba(255, 255, 255, 0.774);
@@ -78,6 +78,7 @@ h4 {
   height: 80px;
   padding: 10px 25px;
   background-color: var(--nav-bg);
+  back-drop:blur(12px);
   z-index: 2;
  
 }
