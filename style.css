@@ -82,7 +82,6 @@ h4 {
   z-index: 2;
   /* From https://css.glass */
 background: rgba(255, 255, 255, 0.53);
-border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(11px);
 -webkit-backdrop-filter: blur(11px);
@@ -428,7 +427,7 @@ place-items: center;
   }
 
   .menu-toggle {
-   background: #fff;
+   background: var(--nav-bg);
     background-image: url(./svg/toogle.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -445,7 +444,6 @@ place-items: center;
    display:flex;
    flex-direction: column;
    justify-content: space-between;
-    background: #fff;
     width: 100vw;
     height: calc(100vh - 80px);
     padding: 20px 20px;
@@ -455,16 +453,19 @@ place-items: center;
     border-top: 1px solid var(--secondary-color);
     transform: translateX(100%);
     transition: transform 0.3s ease-out;
-
+    /* glass blur effect */
+    background: rgba(255, 255, 255, 0.53);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+    border: 1px solid rgba(255, 255, 255, 0.3);  
   }
   .nav-lists ul li{
-    
     width: 100%;
     height: max-content;
     padding: .8rem 0 .8rem 1.6rem;
     margin: 0px 0px 15px 0px;
     border-bottom:1px solid var(--secondary-color);
-    
   }
   .nav-lists ul li a:hover::after{
     display: none;
