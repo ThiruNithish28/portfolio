@@ -39,6 +39,56 @@ a{
     text-transform: capitalize;
 }
 
+/* ------------------------------ title underline effect ----------------------------------------- */
+.title-underline-style{
+    text-align: center;
+    position: relative;
+    padding-bottom: 14px;
+    
+}
+.title-underline-style:after,
+.title-underline-style:before
+{
+    content: " ";
+    display: block;
+    position: absolute;
+    
+}
+
+.title-underline-style:after{
+    width: 100px;
+    height:1.5px;
+    transform: translateX(-50%);
+    left:50%;
+  margin-top: 10px;
+    background-color:#523680;
+    
+}
+.title-underline-style:before{
+    width: 26px;
+    height: 6.7px;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: #523680;
+    animation: move infinite 1.6s ;
+}
+@keyframes move {
+    0%{
+        transform: translateX(240%);
+    }
+    20%{
+        transform: translateX(140%);
+    }
+    80%{
+        transform: translateX(-140%);
+    }
+    100%{
+        transform: translateX(-240%);
+    }
+}
+
+
 /* -----------------------------------blur effect ----------------------------------------------- */
 
 .btn-blur{

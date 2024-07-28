@@ -12,3 +12,16 @@ navToggle.addEventListener("click", () =>{
         navToggle.setAttribute('aria-expanded',false);
     }
 })
+
+
+//  for the active link highlight in nav
+document.addEventListener('DOMContentLoaded', function(){
+    var navMenus = document.querySelectorAll('#nav-lists ul li a');
+    var currentPage = document.location.pathname.split('/').pop();
+    
+    navMenus.forEach(function(link){
+        if(link.getAttribute('href') === currentPage){
+            link.classList.add('active');
+        }
+    });
+})

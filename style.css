@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/* --hover-color:rgb(226, 179, 179); */
-/* --h1-font:'Advent Pro', sans-serif; */
 * {
   margin: 0px;
   padding: 0px;
@@ -35,6 +33,7 @@ li a {
   cursor: pointer;
   text-decoration: none;
   list-style: none;
+  display: inline-block;
   color: var(--link-color);
 }
 
@@ -45,8 +44,9 @@ h1 {
 }
 
 h2 {
-  color: var(--primary-color);
-  font-weight: bold ;
+  font-size:3rem;
+  color: var(--secondary-color);
+  font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
   text-transform: capitalize;
@@ -77,15 +77,13 @@ h4 {
   width: 100%;
   height: 80px;
   padding: 10px 25px;
-/*   background-color: var(--nav-bg);
-  back-drop:blur(12px); */
   z-index: 2;
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.53);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(11px);
--webkit-backdrop-filter: blur(11px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.53);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
  
 }
 
@@ -100,12 +98,6 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 a > span{
   display: none;         /*              arrow symbol          */
 }
-.nav-lists ul  li {
-  display: inline-block;
-  margin-right: 17px;
-  height: 100%;
-  position: relative;
-}
 
 .nav-lists-links {
   height: 100%;
@@ -113,12 +105,11 @@ a > span{
   color: var(--nav-text);
 }
 
-.nav-lists ul li a:hover::after,
-.nav-lists ul li a:hover {
-  /* color:rgba(32, 32, 33, 0.45); */
-  color: var(--secondary-color);
-  width: 100%;
-  left: 0;
+.nav-lists ul  li {
+  display: inline-block;
+  margin-right: 17px;
+  height: 100%;
+  position: relative;
 }
 
 .nav-lists ul li a::after {
@@ -130,6 +121,16 @@ a > span{
   left: 50%;
   background-color: var(--secondary-color);
   transition: width .6s ease-in-out, left .6s ease-in-out;
+}
+
+.nav-lists ul li a:hover::after,
+.nav-lists ul li a:hover ,
+.nav-lists ul li a.active,
+.nav-lists ul li a.active::after {  /* to higlight the active link with js help*/
+  color: var(--secondary-color);
+  font-weight:900 ;
+  width: 100%;
+  left:0;
 }
 
 .mobile-hanbuger-extrat-content
@@ -261,7 +262,7 @@ a > span{
 .about__section {
   margin-top:150px;
   width: 100%;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 .about__section > p{
   font-size: 13px;
@@ -297,38 +298,57 @@ a > span{
   margin-top: 2rem;
 }
 
-.about__section--skill {
-  flex: 1;
-  /* max-width: 40em; */
+.card {
   min-width: 17em;
-  height: 25em;
-
-  text-align: center;
-  border: 3px solid black;
+  height: 15em;
+  border: .2px solid grey;
   border-radius: 14px;
-  padding: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: rgba(51, 51, 51, 0.842) 16px 10px 20px 4px;
+  perspective:280px;
 }
 
+.card .card-container{
+ 
+  position:relative;
+  transform-style:preserve-3d;
+}
 
-.about__section--skill>video {
+.card .card-container .front >video {
   width: 160px;
 }
 
-.about__section--skill:hover {
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+.about__section--skill .card .card-container .back{
+   padding: .6rem;
+   opacity:0;
+   transform:rotateY(-180deg);
+}
+.about__section--skill .card .card-container .front,
+.about__section--skill .card .card-container .back{
+  width:100%;
+  height:100%;
+  border-radius:15px;
+  position:absolute;
+  transition: transform .8s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+  
+}
+.about__section--skill:hover > .card .card-container .front{
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+.about__section--skill:hover > .card .card-container .back{
+  transform:rotateY(0deg);
+  opacity:1;
 }
 
 .about__section--contact {
-  background: linear-gradient(45deg, rgba(2, 2, 2, 0.9), rgba(50, 50, 50, 0.631)), url(image/contact_background.png);
+  background: linear-gradient(45deg, rgba(2, 2, 2, 0.918), rgba(50, 50, 50, 0.631)), url(image/contact_background.png);
   background-size: cover;
   color: white;
   text-align: center;
   padding: 15rem 25rem;
 
-}
-
-.about__section--contact h2 {
-  color: var(--primary-color);
 }
 
 .about__section--contact--call2action {
@@ -362,7 +382,7 @@ place-items: center;
 
 /* --------------------------------projects------------------------------------------------- */
 .main-in-project{
-  margin-top: 80px;
+  margin-top: 90px;
 }
 .project-works{
   padding: 5px;
@@ -371,14 +391,16 @@ place-items: center;
 }
 .project-works div{
 
-  border: 3px solid black;
-  border-radius: 8px;
   min-width:80%;
   text-align: center;
   padding: 1.2rem;
 }
-.project-works div:hover{
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+ 
+.project-works div img.filter:hover{
+  filter: drop-shadow(8.5px 4.5px 5px var(--secondary-color));
+  cursor: pointer;
+  transform: translateY(-20px);
+  transition: all .5s ease-in-out;
 }
 .project-works div > img{
   width:300px;
@@ -389,7 +411,7 @@ place-items: center;
   grid-template-columns: repeat(3,1fr) ;
   color: rgb(216, 199, 223);
   background-color: var(--secondary-color);
-  padding: 5rem;
+  padding: 2.5rem 5rem;
   column-gap: 2rem;
 }
 
@@ -423,7 +445,10 @@ place-items: center;
 @media (max-width: 481px) {
   h1 {
 
-    font-size: 5rem
+    font-size: 5rem;
+  }
+  h2{
+    font-size: 2rem;
   }
 
   .menu-toggle {
@@ -445,20 +470,15 @@ place-items: center;
    flex-direction: column;
    justify-content: space-between;
     width: 100vw;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 65px);
     padding: 20px 20px;
     position: absolute;
     top: 80px;
     left: 0;
     border-top: 1px solid var(--secondary-color);
-    transform: translateX(100%);
+    transform: translateX(120%);
     transition: transform 0.3s ease-out;
-    /* glass blur effect */
-    background: rgba(255, 255, 255, 0.53);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11px);
-    -webkit-backdrop-filter: blur(11px);
-    border: 1px solid rgba(255, 255, 255, 0.3);  
+    background: rgba(255, 255, 255, 1);
   }
   .nav-lists ul li{
     width: 100%;
@@ -467,7 +487,8 @@ place-items: center;
     margin: 0px 0px 15px 0px;
     border-bottom:1px solid var(--secondary-color);
   }
-  .nav-lists ul li a:hover::after{
+  .nav-lists ul li a::after,
+  .nav-lists ul li a.active::after{
     display: none;
   }
   .nav-lists-links{
@@ -534,7 +555,7 @@ place-items: center;
 
 
   .about__section--skill {
-    height: fit-content;
+    height: 13em;
   }
 
   .about__section--container {
