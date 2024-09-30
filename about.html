@@ -11,8 +11,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-  <link href="my_style.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="./Css/my_style.css" rel="stylesheet">
+  <link href="./Css/style.css" rel="stylesheet">
   <!-- link for aos libary -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -26,7 +26,7 @@
   <header>
     <nav class="nav-bar">
       <div class="nav-logo">
-        <img src="./image/logo.png" alt="THIRU">
+        <img src="./Assets/image/logo.png" alt="THIRU">
       </div>
 
       <button aria-controls="nav-lists" aria-expanded="false" class="menu-toggle"></button>
@@ -96,8 +96,8 @@
       <div class="about__section--container ">
         <div class="popout__effect">
           <div class="popout__effect--container">
-            <img src="image/baground_4r_cricle.jpg" alt="" class="popout__circle">
-            <img src="image/my-Image.png" alt="" class="popout__person">
+            <img src="./Assets/image/baground_4r_cricle.jpg" alt="background img" class="popout__circle">
+            <img src="./Assets/image/my-Image.png" alt="profile img" class="popout__person">
           </div>
         </div>
       </div>
@@ -109,7 +109,8 @@
             as a
             proficient web and Android developer. My dedication and sense of responsibility drive me to approach
             challenges with diligence and determination.</p>
-          <p style="margin-top: .5rem;"><a href="files/Update resume.pdf" target="_blank">resume</a></p>
+          <p style="margin-top: .5rem;"><a href="../files/Thirumavalavan-Web-developer.pdf" target="_blank">resume</a>
+          </p>
           <br>
           <p data-aos="fade-up" data-aos-duration="2000">I also like sharing content related to the stuff that I have
             learned over the years in Web Development so it can help other people of the Dev Community. Feel free to
@@ -137,15 +138,15 @@
     <div class="container">
       <h2 class="title-underline-style">what can i do for you </h2>
 
-      <div class="d-flex g-1e aboutSec__skillContainer ">
+      <div class="d-flex  aboutSec__serviceCardContainer ">
         <!-- 1st card -->
-        <div class="about__section--skill" data-aos="fade-down-right" data-aos-duration="1000" data-aos-offset="200"
+        <div class="about__section--service" data-aos="fade-down-right" data-aos-duration="1000" data-aos-offset="200"
           data-aos-easing="ease-out-cubic">
           <div class="card">
             <div class="card-container">
               <div class="front">
                 <video id="darkModeVideo" autoplay="autoplay" muted="muted" loop="loop" playsinline="">
-                  <source src="./image/web-developer.mp4" type="video/mp4">
+                  <source src="./Assets/image/web-developer.mp4" type="video/mp4">
                 </video>
                 <h3>bulid a responive website </h3>
               </div>
@@ -159,16 +160,16 @@
           </div>
         </div>
         <!-- 2nd card -->
-        <div class="about__section--skill" data-aos="fade-down-right" data-aos-duration="1000" data-aos-offset="400"
+        <div class="about__section--service" data-aos="fade-down-right" data-aos-duration="1000" data-aos-offset="400"
           data-aos-easing="ease-out-cubic">
           <div class="card">
             <div class="card-container">
               <div class="front">
-                <video src="./image/app-development.mp4" autoplay="autoplay" muted="muted" loop="loop" playsinline=""
-                  type="video/mp4"></video>
-                  <h3>bulid a amazing app </h3>
+                <video src="./Assets/image/app-development.mp4" autoplay="autoplay" muted="muted" loop="loop"
+                  playsinline="" type="video/mp4"></video>
+                <h3>bulid a amazing app </h3>
               </div>
-  
+
               <div class="back">
                 <h3>bulid a amazing app </h3>
                 <p>Trust my skills to develop amazing, modern, high-performing applications quickly that meet your
@@ -178,23 +179,24 @@
           </div>
         </div>
         <!-- 3rd card -->
-        <div class="about__section--skill" data-aos="fade-down-right" data-aos-duration="1000" data-aos-offset="400"
+        <div class="about__section--service" data-aos="fade-down-right" data-aos-duration="1000" data-aos-offset="400"
           data-aos-easing="ease-out-cubic">
           <div class="card">
             <div class="card-container">
               <div class="front">
                 <video id="darkModeVideo" autoplay="autoplay" muted="muted" loop="loop" playsinline="">
-                  <source src="./image/web-developer.mp4" type="video/mp4">
+                  <source src="./Assets/image/web-developer.mp4" type="video/mp4">
                 </video>
                 <h3>Maintenance and support</h3>
               </div>
-  
+
               <div class="back">
                 <h3>Maintenance and support</h3>
-                <p>Keep your website up-to-date and glitch-free with my maintenance and support services. I offer timely updates and troubleshooting to ensure smooth operation.
+                <p>Keep your website up-to-date and glitch-free with my maintenance and support services. I offer timely
+                  updates and troubleshooting to ensure smooth operation.
                 </p>
               </div>
-  
+
             </div>
           </div>
         </div>
@@ -211,7 +213,7 @@
       <div class="about__section--contact--call2action d-flex g-2e">
         <button class="btn btn-blur" id="open-contactForm" data-aos="fade-left" data-aos-duration="1500"><a
             href="mailto: thirunithish07@gmail.com ">contact me</a></button>
-        <button class="btn btn-blur " data-aos="fade-right" data-aos-duration="1500"><a href="project.html">see my
+        <button class="btn btn-blur " data-aos="fade-right" data-aos-duration="1500"><a href="project.html">my
             project</a></button>
       </div>
     </div>
@@ -219,31 +221,120 @@
 
   <section class="container my_skills--container">
     <h2 class="title-underline-style">SKILLS</h2>
-    <div class="my_skills d-grid">
-      <div class="d-flex-col">
-        <img src="./image/c.webp" alt="c language">
-        <h3 style="color: rgb(17, 0, 255);">C Programming</h3>
+    <div class="my_skills">
+      <div class="scroller-container" style="
+       --width: 150px;
+       --height: 70px;
+       --quantity: 9;
+       --animation-name:scrollerLeft;
+       --left:100%;
+       ">
+        <div class="scroller-list">
+          <div class="scroller-list-items skill-box" style=" --position:1;">
+            <img src="">
+            <h3>C/C++</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:2;">
+            <img src="">
+            <h3>Java</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:3;">
+            <img src="">
+            <h3>Python</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:4;">
+            <img src="">
+           <h3> Azure</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:5;">
+            <img src="">
+            <h3>Css 3</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:6;">
+            <img src="">
+            <h3>Java</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:7;">
+            <img src="">
+            <h3>React js</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:8;">
+            <img src="">
+            <h3>GitHub</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:9;">
+            <img src="">
+            <h3>Figma</h3>
+          </div>
+
+
+        </div>
       </div>
-      <div class="d-flex-col">
-        <img src="./image/java.webp" alt="java language">
-        <h3>Java Programming</h3>
+      
+      <div class="scroller-container" style="
+       --width: 150px;
+       --height: 70px;
+       --quantity: 9;
+       --animation-name:scrollerRight;
+       --right:100% 
+       ">
+        <div class="scroller-list">
+          <div class="scroller-list-items skill-box" style=" --position:1;">
+            <img src="">
+            <h3>MySQL</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:2;">
+            <img src="">
+            <h3>FireBase</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:3;">
+            <img src="">
+            <h3>Python</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:4;">
+            <img src="">
+            <h3>HTML 5</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:5;">
+            <img src="">
+            <h3>Css 3</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:6;">
+            <img src="">
+            <h3>Git</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:7;">
+            <img src="">
+            <h3>React js</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:8;">
+            <img src="">
+            <h3>Azure</h3>
+          </div>
+
+          <div class="scroller-list-items skill-box" style=" --position:9;">
+            <img src="">
+            <h3>VS code</h3>
+          </div> 
+
+        </div>
       </div>
-      <div class="d-flex-col">
-        <img src="./image/py.webp" alt="python">
-        <h3 style="color: rgb(0, 128, 32);">Python Programming</h3>
-      </div>
-      <div class="d-flex-col">
-        <img src="./image/html.webp" alt="html">
-        <h3 style="color: rgb(255, 72, 0);">HTML 5</h3>
-      </div>
-      <div class="d-flex-col">
-        <img src="./image/css.webp" alt="css">
-        <h3 style="color: rgba(0, 102, 255, 0.918);">Css 3</h3>
-      </div>
-      <div class="d-flex-col">
-        <img src="./image/js.webp" alt="java script">
-        <h3 style="color: rgba(255, 208, 0, 0.884);">Java Script</h3>
-      </div>
+        
     </div>
   </section>
 
@@ -289,6 +380,7 @@
 
 
   <script src="./js/script.js"></script>
+
 
   <!-- aos script link  -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -10,15 +10,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
-  <link href="my_style.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link rel="stylesheet" href="resume_style.css">
+  <link href="./Css/my_style.css" rel="stylesheet">
+  <link href="./Css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./Css/resume_style.css">
 </head>
 <body>
     <header>
         <nav class="nav-bar">
           <div class="nav-logo">
-            <img src="./image/logo.png" alt="THIRU">
+            <img src="./Assets/image/logo.png" alt="THIRU">
           </div>
     
           <button aria-controls="nav-lists" aria-expanded="false" class="menu-toggle"></button>
@@ -83,8 +83,8 @@
       <main id="resume" class="resume  page__style container">
         <div class="page__description">
             <div class="heading d-flex-col">
-                <h2>resume</h2>
-                <p class="sub-title">fresher</p>
+                <h2 class="Sec-Title">resume</h2>
+               
             </div>
             <div class="d-flex  resume-container container">
                 <div class="row1 d-flex-col" style="gap: 50px;">
@@ -92,7 +92,7 @@
                         <div class="block-heading">
                             <h3>education</h3>
                         </div>
-                        <div class="timeline-items ">
+                        <div class="timeline-items">
                             <div class="left">
                                 <h5>2021- 2025</h5>
                             </div>
@@ -101,7 +101,8 @@
                             </div>
                             <div class="right">
                                 <h4>computer science & Business Systems</h4>
-                                <p>K. Ramakrishnan College of Engineering Current CGPA: 7.57</p>
+                                <span>K. Ramakrishnan College of Engineering<br>
+                                CGPA: 7.57</span>
                             </div>
                         </div>
 
@@ -113,10 +114,9 @@
 
                             </div>
                             <div class="right">
-                                <h4>hsc</h4><br>
-                                <p>Sowdambikaa Group of Institutions
-                                    <br> Percentage: 86%
-                                </p>
+                                <h4>hsc</h4>
+                                <span>Sowdambikaa Higher Secondary School <br>
+                                    Percentage: 86%</span>
                             </div>
                         </div>
 
@@ -128,10 +128,9 @@
 
                             </div>
                             <div class="right">
-                                <h4>ssc</h4><br>
-                                <p>Sowdambikaa Group of Institutions
-                                    <br>Percentage: 80%
-                                </p>
+                                <h4>ssc</h4>
+                                <span>Kalaimagal Matric Higher Seconary School <br>
+                                    Percentage: 82%</span>
                             </div>
                         </div>
                     </div>
@@ -140,12 +139,12 @@
                         <h3>experience</h3>
                         <div class="timeline-items">
                             <div class="left">
-                                <h5>2023</h5>
+                                <h5>2023-2023</h5>
                             </div>
                             <div class="divider"></div>
                             <div class="right">
-                                <h4>barath inter</h4>
-                                <p>I am done internship in barath in this I have been completing the task one
+                                <h4>bharat inter</h4>
+                                <p>I am done 1 month internship in bharat in this I have been completing the task one
                                     by one by using my strong knowledge in( html css javascript and java)
                                 </p>
                             </div>
@@ -153,8 +152,27 @@
                     </div>
 
                     <!-- certificate -->
-                    <div class="certificate-container">
-
+                    <div class="certificate-section">
+                        <div class="block-heading">
+                            <h3>Certificate</h3>
+                        </div>
+                        <div class="certificate-container">
+                        <div class="certificate Web-development">
+                            <div class="certificate-img-container">
+                                <img src="./files/Certificate/WebDevelopment.png" alt="web-developement-certificate">
+                            </div>
+                            
+                            <p class="certificate-name">Responsive Web Design</p>
+                        </div>
+                        <!-- sql certificate -->
+                        <div class="certificate ">
+                            <div class="certificate-img-container">
+                                <img src="./files/Certificate/SQL-certificate.png" alt="SQL-certificate">
+                            </div>
+                            
+                            <p class="certificate-name">SQL</p>
+                        </div>
+                    </div>
                     </div>
                 </div>
                 <!-- skill box -->
@@ -164,7 +182,7 @@
                     </div>
                     <div class="skills skill-1">
                         <div class="skill-title">
-                            <h4>c programming</h4>
+                            <h4>c/c++ programming</h4>
                             <p class="skill-percentage-value">90%</p>
                         </div>
                         <div class="percentage-90">
@@ -173,7 +191,7 @@
                     </div>
                     <div class="skills skill-2">
                         <div class="skill-title">
-                            <h4>c++ programming</h4>
+                            <h4>Javascript</h4>
                             <p class="skill-percentage-value">80%</p>
                         </div>
                         <div class="percentage-80">
@@ -191,7 +209,7 @@
                     </div>
                     <div class="skills skill-4">
                         <div class="skill-title">
-                            <h4>python programming</h4>
+                            <h4>React.js</h4>
                             <p class="skill-percentage-value">50%</p>
                         </div>
                         <div class="percentage-50">
@@ -225,24 +243,7 @@
                             <spam class="ink"></spam>
                         </div>
                     </div>
-                    <div class="skills skill-8">
-                        <div class="skill-title">
-                            <h4>git</h4>
-                            <p class="skill-percentage-value">50%</p>
-                        </div>
-                        <div class="percentage-50">
-                            <spam class="ink"></spam>
-                        </div>
-                    </div>
-                    <div class="skills skill-9">
-                        <div class="skill-title">
-                            <h4>git hub</h4>
-                            <p class="skill-percentage-value">80%</p>
-                        </div>
-                        <div class="percentage-80">
-                            <spam class="ink"></spam>
-                        </div>
-                    </div>
+                   
                     <h3 style="margin-top: 50px;">professional skills</h3>
                     <div class="skills skill-10">
                         <div class="skill-title">
@@ -276,5 +277,10 @@
 
         </div>
     </main>
+
+    <!-- js for nav toogle btn -->
+    <script src="./js/script.js"></script>
 </body>
+
+
 </html>
