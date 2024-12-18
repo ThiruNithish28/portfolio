@@ -67,6 +67,54 @@ h4 {
   text-transform: capitalize;
 }
 
+
+/*------------------------------ mouse effect ---------------------- */
+
+body {
+  cursor: none;
+}
+
+/* Main Cursor (small dot) */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: purple; /* You can change this color */
+  border-radius: 50%;
+  pointer-events: none; /* Prevent interaction */
+  z-index: 1000;
+  transition: transform 0.1s ease-out;
+}
+
+/* Cursor Trail (larger dot) */
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(128, 0, 128, 0.3); /* Purple with transparency */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  transition: transform 0.3s ease-out;
+}
+
+.cursor,
+.cursor-trail{
+  box-shadow: 0 0 10px rgba(128, 0, 128, 0.7);
+}
+
+.cursor.hover {
+  width: 30px; /* Larger size */
+  height: 30px;
+  background-color:#bb86fc; /* Change color */
+  transform: scale(1.2); /* Slightly bigger */
+  box-shadow: 0 0 15px#bb86fc; /* Glowing effect */
+}
+
 /* ------------------------------------------------------------------------------------- */
 .nav-bar {
   position: fixed;
