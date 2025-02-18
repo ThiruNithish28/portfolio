@@ -147,7 +147,7 @@ a{
 
 .popout__effect{
     position: relative;
-    max-width: 89%;
+    max-width: 60%;
     min-width:57%;
     padding: 0;
     margin: auto;
@@ -155,7 +155,7 @@ a{
 .popout__effect--container{
     display: grid;
     align-items: end;
-    aspect-ratio: 1/1.35;
+    aspect-ratio: 1/1.222;
     border-radius: 0 0 100vw 100vw;
     overflow: hidden;
     transition: transform 0.6s ease;
@@ -166,24 +166,25 @@ a{
     position: absolute;
     inset: auto 0 0;
     margin-inline:auto ;
-    max-width: 100%;
+    max-width: 95%;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    /* filter: blur(5px); */
 }
 .popout__person{
     position: relative;
-    left:1.1rem;
+    left:1rem;
     max-width: 100%;
     z-index: 1;
-    transform: scale(1.37);
+    transform: scale(1.1);
     transition: transform .8s ease;
 }
 .popout__effect--container:hover{
-    transform: scale(1.1);
+    transform: scale(1.09);
 }
 .popout__effect--container:hover .popout__person{
-    transform: translateY(-2em)
-    scale(1.4);
+    transform: translateY(-1em)
+    scale(1.222);
 }
 
 
