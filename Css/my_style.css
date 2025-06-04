@@ -2,9 +2,16 @@
 a{
     text-decoration: none;
 }
+
 .container{
     width:100%;
     max-width:1100px;
+    margin:auto;
+    padding:1.2rem 1.5rem;
+}
+.large-container{
+    width:100%;
+    max-width:1270px;
     margin:auto;
     padding:1.2rem 1.5rem;
 }
@@ -18,6 +25,7 @@ a{
     display:flex;
     flex-direction: column;
 }
+
 .d-grid{
     display: grid;
 }
@@ -30,7 +38,12 @@ a{
 .g-2e{
     gap:2.8em;
 }
-
+.top-border-1{
+    border-top: 1px solid black;
+}
+.font-weight-600{
+    font-weight:600 ;
+}
 .btn{
     cursor: pointer;
     font-size:1.9rem;
@@ -38,7 +51,47 @@ a{
     border-radius: 1.1rem;
     text-transform: capitalize;
 }
+/* ------------------------------ accordian effect ----------------------------------------- */
 
+.accordion{
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 10px;
+    padding-bottom: 25px;
+    border-bottom:1px solid black;
+    
+}
+.accordion:hover{
+    cursor: pointer;
+}
+.accordion-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion-header .title{
+    font-family: var(--heading-font);
+    text-transform: capitalize;
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+.accordion-header .arrow{
+    font-size: 5rem;
+}
+.accordion-content {
+    width: 100%;
+    max-width: 800px;
+    max-height: 0;
+    font-size: 1.9rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+@media (max-width: 991px) {
+    .accordion-inner .title {
+        font-size: 2.8rem;
+    }
+}
 /* ------------------------------ title underline effect ----------------------------------------- */
 .title-underline-style{
     text-align: center;
@@ -216,11 +269,12 @@ a{
 .scroller-list .scroller-list-items{
     width:var(--width);
     height: calc(var(--height) - 1em);
+    text-align: center;
     position: absolute;
     left: var(--left,auto); /*where if the animation for left to right it works with --left or else its auto value be 0  */
     right: var(--right,auto); /* where if the animation for right to left it works with --right or else its auto value be 0 */
-    animation: var(--animation-name) 30s linear infinite;
-    animation-delay: calc(30s / var(--quantity) * (var(--quantity) - var(--position)) * -1);/*  formula : [Duration * delay * -1  ] where duration = animation-delay / no of items ,  delay = (no of items - xth items) for example 1st item = 5 -1*/
+    animation: var(--animation-name) 90s linear infinite;
+    animation-delay: calc(90s / var(--quantity) * (var(--quantity) - var(--position)) * -1);/*  formula : [Duration * delay * -1  ] where duration = animation-delay / no of items ,  delay = (no of items - xth items) for example 1st item = 5 -1*/
 }
 
 @keyframes scrollerLeft {
@@ -237,9 +291,7 @@ a{
 }
 /* ------ */
 @media only screen and (max-width: 576px){
-    body{
-        text-align: center;
-    }
+    
     .d-flex{
         flex-wrap: wrap;
         justify-content: center;

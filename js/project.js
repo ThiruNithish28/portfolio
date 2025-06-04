@@ -12,5 +12,5 @@ document.querySelector(".rockpaper-website").addEventListener("click", () => {
 });
 
 document.querySelector(".securestego-website").addEventListener("click", () => {
-    window.open("https://thirunithish28.github.io/SecureStego/", "_blank");
+    window.open("./SecureStego.html", "_blank");
 });

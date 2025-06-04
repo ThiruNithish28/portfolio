@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GSAP Snap vs No Snap</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    section {
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      color: white;
+      font-weight: bold;
+      border-bottom: 10px solid white;
+    }
+
+    .panel1 { background-color: #e74c3c; }
+    .panel2 { background-color: #f39c12; }
+    .panel3 { background-color: #2ecc71; }
+    .panel4 { background-color: #3498db; }
+  </style>
+</head>
+<body>
+
+  <section class="panel1">ONE</section>
+  <section class="panel2">TWO</section>
+  <section class="panel3">THREE</section>
+  <section class="panel4">FOUR</section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const panels = gsap.utils.toArray("section");
+
+    panels.forEach((panel) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top top",
+        end: "bottom top",
+        pin: true,
+        pinSpacing: true // 🔁 Allows space between panels when pinned
+      });
+    });
+
+    // 👇 Snap ON — You will see this one "pulls" to nearest panel
+    ScrollTrigger.create({
+      snap: 1 / (panels.length - 1),
+      duration: 0.4,
+      ease: "power1.inOut"
+    });
+  </script>
+
+</body>
+</html>

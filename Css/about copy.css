@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 2.4rem;
+    line-height: 1.6;
+    scroll-behavior:smooth;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .my_hobbies h4{
+    color: black;
+  }
+
+
+  /* Page header image 
+===================== */
+.ph-image {
+	position: absolute;
+	top: -160px;
+	right: 14vw;
+	width: clamp(340px, 18vw, 800px);
+  height: 478px;
+	z-index: 2;
+	line-height: 0;
+   /* object-fit:fill;
+  object-position: center; */
+    filter: grayscale(70%);
+}
+@media (max-width: 1920px) {
+	.ph-image {
+		width: 380px;
+	}
+	#page-header.ph-full:not(.ph-center):not(.ph-bg-image) .ph-image {
+		width: 440px;
+	}
+}
+@media (max-width: 1600px) {
+	.ph-image,
+	#page-header.ph-full:not(.ph-center):not(.ph-bg-image) .ph-image {
+		width: 25vw;
+	}
+}
+@media (max-width: 1024px) {
+	.ph-image,
+	#page-header.ph-full:not(.ph-center):not(.ph-bg-image) .ph-image {
+		right: 10vw;
+	}
+}
+@media (max-width: 540px) {
+	.ph-image,
+	#page-header.ph-full:not(.ph-center):not(.ph-bg-image) .ph-image {
+		width: 50%;
+	}
+
+}
+
+
+  /*  */
+  .about-banner {
+ 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 577.578px;
+
+  }
+  @media (min-width: 1025px){
+    .about-banner {
+      height: 100vh;
+
+    }
+  }
+  .page-title{
+    font-family: var(--heading-font);
+    margin-left: 7vw;
+    font-weight: bold;
+  }
+  .bg-text {
+    position: absolute;
+    margin-left:17vw;
+    color: grey;
+    text-transform: capitalize;
+    font-size: calc(19px + 19.5vw);
+    font-weight: bold;
+    font-weight: 800;
+    opacity: 0.1;
+  }
+  @media (max-width: 540px) {
+    .bg-text {
+      margin-left: 11.555vw;
+    }
+  }
+  .about-banner-container {
+    position: relative;
+    width: 100%;
+    z-index: 99999;
+  }
+  .about-banner-container .main-text {
+    margin-left: 10vw;
+    font-size: clamp(32px, 10vw, 220px);
+    font-weight: 900;
+    z-index: 5;
+  }
+  /* change this as ph-image */
+  /* .about-banner-container img {
+    position: absolute;
+    top:-190px;
+    right:10vw;
+    width: 25vw;
+    height: 478px;
+    object-fit: cover;
+    filter: grayscale(70%);
+  } */
+  
+ .my-intro{
+    margin-top: 80px;
+ }
+  .my-intro p {
+    line-height: 1.6;
+    margin-bottom: 2.3rem;
+  }
+  .my-intro h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    color: black;
+  }
+
+  /* services section  */
+.about__section--services{
+  width:100%;
+  margin-bottom: 13rem;
+}
+.about__section--services .section-header{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+    .section-header .section-header__title{
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .section-header .section-header__description{
+  flex: 0 0 41.5556666%;
+    }
+}
+.section-header .section-header__description{
+  align-self: center;
+}
+.section-header .section-header__description .text-1{
+  font-weight: 600;
+  font-family: var(--heading-font); 
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.section-header .section-header__description .text-2{
+  font-size: 1.9rem;
+  color:#777;
+  margin: 0 0 30px;
+}
+.section-header .section-header__title .caption{
+  font-size: calc(21px + 0.2vw);
+  margin-bottom: 15px;
+  color: #616161;
+  font-weight: 600;
+}
+.section-header .section-header__title h2{
+font-size: calc(24px + 2vw);
+    line-height: 1.2;
+  text-align: left;
+  font-weight: 600;
+}
+
+
+  .panel {
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  background: #dadada;
+}
+
+
+.my_hobbies-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  /* padding: 0 50px; */
+    background: rgba(0, 0, 0, 0.03);
+}
+.my_hobbies-container .image-container{
+  width: 45%!important;
+
+}
+
+.hobby-image{
+  position: relative;
+  overflow: hidden;
+}
+.hobby-image__item{
+  position: absolute;  /* KEY: to allow x/y animation */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(100%, 100%) rotate(-35deg) scale(1.1);
+}
+.image-container img,
+.image-container video{
+  width:100%;
+  height: 100%;
+object-fit: cover;
+}
+.my_hobbies{
+  margin-right: 1.4rem;
+  margin-top: 2.9rem;
+}
+.hobby-hover{
+  font-size: 2.8rem;
+  font-weight: normal;
+  text-align: right;
+}
+.hobby-hover span{
+  color: grey;
+}
+.hobby-hover span:hover,
+.hobby-hover span:hover span{
+  color: black;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+.hobby-hover:hover{
+  cursor: pointer;
+}
+
+
+.about__section--achivement{
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  perspective: 500px;
+}
+.achivement-card-wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;;
+  transform-style: preserve-3d;
+}
+.achivement-card{
+  position: absolute;
+  width:400px;
+  height: 400px;
+  
+}
+
+.achivement-card-wrapper .card-1{
+  top:20%;
+  right:17%;
+  transform: translateZ(-30rem);
+}
+.achivement-card-wrapper .card-2{
+  top:20%;
+  left: 12%;
+  transform: translateZ(-80rem);
+}
+.achivement-card-wrapper .card-3{
+  top:30%;
+  right: 5%;
+  transform: translateZ(-110rem);
+}
+  /* rotate the scroll dopwn */
+  .scroll-circle {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    animation: spin 8s linear infinite;
+    z-index: 1000;
+  }
+  
+  .scroll-circle svg {
+    width: 100%;
+    height: 100%;
+  }
+  .scroll-circle .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 450px) {
+    /* .about-banner {
+      padding: 0.5rem;
+    }
+    .about-banner-container img {
+      width: 190px;
+      height:220px;
+    }
+    */
+  }
+  
+
+  

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap+family=Playfair+Display:wght@400;700&display=swap');
+/* poppins and SpaceGrotesk */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
 
 * {
   margin: 0px;
@@ -18,15 +22,24 @@
   --bg-color: rgba(255, 255, 255, 0.774);
   --primary-color: #bb86fc;
   --secondary-color:#523680;
+  --heading-font: "Space Grotesk";
   --h1-font: 'Arial Black';
   /* --h1-font:"Sigmar", serif; */
   --sub-heading-ff:Sfprodisplay,Arial,sans-serif;
 
 }
 
-
+.font-heading{
+  font-family: var(--heading-font);
+}
+.text-xxlg {
+    font-size: calc(100% + 0.7vw) !important;
+}
 body {
-  font: 1.6rem 'Montserrat';
+  /* font: 1.6rem 'Montserrat'; */
+  /* font: 1.6rem 'Poppins', sans-serif; */
+  font: 1.6rem 'Inter', sans-serif;
+  line-height: 1.6;
   background-color: var(--bg-color);
   color: black;
   overflow-x: hidden;
@@ -123,6 +136,7 @@ body {
 
 /* ------------------------------------------------------------------------------------- */
 .nav-bar {
+  font-size:1.754rem;
   position: fixed;
   top: 0;
   display: flex;
@@ -314,9 +328,9 @@ a > span{
 
 /* ---------------------------------- About Section ----------------------------------------------- */
 .about__section {
-  margin-top:150px;
+  
   width: 100%;
-  padding-bottom: 4rem;
+  padding-bottom: 5.9rem;
   
 }
 .about__section > p{
@@ -353,25 +367,24 @@ a > span{
   margin-top: 2rem;
 }
 
-.about__section
-.card {
+.about__section .card {
   width: 100%;
   height: 100%;
-  border: .2px solid grey;
-  border-radius: 14px;
-  padding: 1rem 2rem;
   text-align: center;
-  box-shadow: rgba(51, 51, 51, 0.842) 16px 10px 20px 4px;
   perspective:280px;
+  /* for disable the bootstrap style (for .card class) */
+  background-color: transparent!important;
+  border: none !important;
 }
 
 .aboutSec__serviceCardContainer{
   justify-content: center;
-  gap: 1.5em;
+  gap: 2.5em;
 }
 .about__section--service{
-  width: 250px ;
-  height:253px;
+  width: 280px ;
+  height:283px; 
+  /*  height control in the class .front  */
 }
 .card .card-container{
   position:relative;
@@ -390,11 +403,13 @@ a > span{
 .about__section--service .card .card-container .front,
 .about__section--service .card .card-container .back{
   width:100%;
-  height:100%;
+  height:283px;
+  padding: 1rem 2rem; 
   border-radius:15px;
   position:absolute;
   transition: transform .8s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
-  
+  border: .2px solid grey; 
+  box-shadow: rgba(51, 51, 51, 0.842) 16px 10px 20px 4px; 
 }
 .about__section--service:hover > .card .card-container .front{
   transform: rotateY(180deg);
@@ -408,7 +423,8 @@ a > span{
 .about__section--contact {
 
   width: 100%;
-  background: linear-gradient(45deg, rgba(2, 2, 2, 0.918), rgba(50, 50, 50, 0.631)), url(../Assets/image/contact_background.png);
+  /* background: linear-gradient(45deg, rgba(2, 2, 2, 0.918), rgba(50, 50, 50, 0.631)), url(../Assets/image/contact_background.png); */
+  background-color: black;
   background-size: cover;
   color: white;
   text-align: center;
@@ -437,19 +453,24 @@ a > span{
   flex-direction: column;
   align-items: center;
 }
+
 .my_skills{
-  width:80vw;
+  width:85vw;
+  margin-bottom: 70px;
 }
-.my_skills .skill-box{
+.my_skills > div{
+  margin-bottom: 5rem;
+}
+/* .my_skills .skill-box{
   display: grid;
   place-items: center;
   border-radius: 10px;
   box-shadow: .5px .5px 10px grey;
-}
+} */
  .skill-box i{
   display: block;
  font-size: 80px; /*for change the width */
-
+color: black !important;;
 
 }
 
@@ -666,7 +687,10 @@ position: absolute;
   .about__section--contact {
     padding: 5rem 5rem;
   }
- 
+  .my_skills{
+    width:90vw;
+  }
+
   .footer{
     padding: 2.5rem 2rem;
   }
